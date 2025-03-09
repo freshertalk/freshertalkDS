@@ -77,7 +77,7 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 100%;
     padding: 0 1rem;
-    
+
 }
 
 .navbar-toggler {
@@ -453,15 +453,15 @@ footer .text-muted {
         transition: all 0.3s ease; */
 
         display: block;
-    border: none;
-    padding: 0.5rem 0.75rem;
-    font-size: 1.25rem;
-    line-height: 1;
-    background-color: transparent;
-    border-radius: 0.25rem;
-    transition: all 0.3s ease;
-    outline: none;
-    margin-right: 1rem;
+        border: none;
+        padding: 0.5rem 0.75rem;
+        font-size: 1.25rem;
+        line-height: 1;
+        background-color: transparent;
+        border-radius: 0.25rem;
+        transition: all 0.3s ease;
+        outline: none;
+        margin-right: 1rem;
     }
 
     /* .navbar-toggler-icon {
@@ -499,4 +499,98 @@ footer .text-muted {
         margin-top: 70px;
         z-index: 900;
     }
+
+
+
+
+
+    /* Fresh About Us Section */
+    #fresh-about-us {
+        padding: 1rem 0 !important;
+        background-color: #f8f9fa !important;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    #fresh-about-us .container {
+        position: relative;
+    }
+
+    #fresh-about-us .about-us-heading {
+        font-size: 2.5rem !important;
+        font-weight: 700 !important;
+        color: #333 !important;
+        margin-bottom: 1.5rem !important;
+        text-align: center !important;
+        position: relative !important;
+        padding-bottom: 0.5rem !important;
+        transition: color 0.3s ease !important;
+    }
+
+    #fresh-about-us .about-us-heading::after {
+        content: '' !important;
+        position: absolute !important;
+        width: 0 !important;
+        height: 3px !important;
+        bottom: 0 !important;
+        left: 50% !important;
+        background-color: #007BFF !important;
+        transition: width 0.3s ease, left 0.3s ease !important;
+        transform: translateX(-50%) !important;
+    }
+
+    #fresh-about-us .about-us-heading:hover::after {
+        width: 100% !important;
+    }
+
+    #fresh-about-us .about-us-text {
+        font-size: 1.25rem !important;
+        line-height: 1.6 !important;
+        color: #555 !important;
+        text-align: justify !important;
+        position: relative !important;
+        padding: 0.5rem 0 !important;
+        transition: color 0.3s ease !important;
+
+    }
+
+    #fresh-about-us .about-us-text::after {
+        content: '' !important;
+        position: absolute !important;
+        width: 0 !important;
+        height: 2px !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        background-color: #007BFF !important;
+        transition: width 0.3s ease !important;
+    }
+
+    #fresh-about-us .about-us-text:hover {
+        color: #0056b3 !important;
+    }
+
+    #fresh-about-us .about-us-text:hover::after {
+        width: 100% !important;
+    }
+
+    #fresh-about-us .about-us-text+.about-us-text {
+        margin-top: 1.5rem !important;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        #fresh-about-us {
+            padding: 2rem 0 !important;
+        }
+
+        #fresh-about-us .about-us-heading {
+            font-size: 2rem !important;
+        }
+
+        #fresh-about-us .about-us-text {
+            font-size: 1.1rem !important;
+        }
+    }
+
 }
