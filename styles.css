@@ -18,12 +18,18 @@ body {
 }
 
 /* Navbar */
-#mainNav {
+/* #mainNav {
     transition: all 0.3s ease;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 
     z-index: 1000;
     /* High value to stay on top */
+} */
+
+#mainNav {
+    background-color: #f8f9fa; /* Light gray from the image */
+    z-index: 1000; /* Ensure it’s above other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 #mainNav.scrolled {
@@ -54,16 +60,41 @@ body {
 }
 
 /* vinay: this is for hamberger issue : start */
-styles.css .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(0, 123, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+/* Ensure navbar toggler is visible on mobile */
+.navbar-toggler {
+    display: block; /* Ensure it’s always visible when not hidden by media query */
+    border: none;
+    padding: 0.5rem 0.75rem; /* Increase padding for better touch area */
+    font-size: 1.25rem; /* Default Bootstrap size */
+    line-height: 1;
+    background-color: transparent;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease; /* Smooth transition for hover/focus */
+    outline: none; /* Remove default outline */
 }
 
-/* styles.css */
-.navbar-toggler:focus,
-.navbar-toggler:active {
-    outline: none;
-    background-color: #007BFF;
-    /* Blue background */
+/* Customize the toggler icon */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(0, 123, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    display: block; /* Ensure the icon is treated as a block element */
+}
+
+/* Ensure contrast with navbar background */
+.navbar-light .navbar-toggler {
+    color: #007BFF; /* Match theme */
+    border-color: rgba(0, 123, 255, 0.5); /* Subtle border */
+}
+
+/* Focus state for accessibility */
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Blue glow on focus */
 }
 
 /* vinay: this is for hamberger issue : end */
