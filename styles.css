@@ -24,17 +24,16 @@ body {
 
     z-index: 1000;
     /* High value to stay on top */
-}
+/* } */
 
-*/
+
 /* #mainNav {
-    background-color: #f8f9fa; /* Light gray from the image */
+background-color: #f8f9fa; 
 z-index: 1000;
-/* Ensure it’s above other content */
 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+} */
 
-*/ #mainNav.scrolled {
+#mainNav.scrolled {
     background: #fff;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
