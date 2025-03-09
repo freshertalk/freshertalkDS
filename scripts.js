@@ -82,7 +82,7 @@ const heroSwiper = new Swiper(".heroSwiper", {
 });
 
 const workshopSwiper = new Swiper(".workshopSwiper", {
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 30,
   navigation: {
     nextEl: ".swiper-button-next",
@@ -97,7 +97,7 @@ const workshopSwiper = new Swiper(".workshopSwiper", {
 });
 
 const successSwiper = new Swiper(".successSwiper", {
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 30,
   navigation: {
     nextEl: ".swiper-button-next",
