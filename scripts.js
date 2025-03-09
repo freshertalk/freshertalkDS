@@ -74,7 +74,7 @@ backToTop.addEventListener("click", () => {
 const heroSwiper = new Swiper(".heroSwiper", {
   effect: "fade",
   autoplay: { delay: 5000, disableOnInteraction: false },
-  loop: true,
+  loop: false,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
