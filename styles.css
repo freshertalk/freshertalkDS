@@ -24,15 +24,17 @@ body {
 
     z-index: 1000;
     /* High value to stay on top */
-} */
-
-#mainNav {
-    background-color: #f8f9fa; /* Light gray from the image */
-    z-index: 1000; /* Ensure it’s above other content */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-#mainNav.scrolled {
+*/
+/* #mainNav {
+    background-color: #f8f9fa; /* Light gray from the image */
+z-index: 1000;
+/* Ensure it’s above other content */
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+*/ #mainNav.scrolled {
     background: #fff;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
@@ -61,19 +63,28 @@ body {
 
 /* vinay: this is for hamberger issue : start */
 /* Ensure navbar toggler is visible on mobile */
+/* Navbar and Toggler */
+#mainNav {
+    background-color: #f8f9fa;
+    /* Light gray from the image */
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 .navbar-toggler {
-    display: block; /* Ensure it’s always visible when not hidden by media query */
+    display: block;
     border: none;
-    padding: 0.5rem 0.75rem; /* Increase padding for better touch area */
-    font-size: 1.25rem; /* Default Bootstrap size */
+    padding: 0.5rem 0.75rem;
+    font-size: 1.25rem;
     line-height: 1;
     background-color: transparent;
     border-radius: 0.25rem;
-    transition: all 0.3s ease; /* Smooth transition for hover/focus */
-    outline: none; /* Remove default outline */
+    transition: all 0.3s ease;
+    outline: none;
+    margin-right: 1rem;
+    /* Space from the right edge */
 }
 
-/* Customize the toggler icon */
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(0, 123, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
     width: 1.5em;
@@ -83,18 +94,73 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
-    display: block; /* Ensure the icon is treated as a block element */
+    display: block;
 }
 
-/* Ensure contrast with navbar background */
 .navbar-light .navbar-toggler {
-    color: #007BFF; /* Match theme */
-    border-color: rgba(0, 123, 255, 0.5); /* Subtle border */
+    color: #007BFF;
+    border-color: rgba(0, 123, 255, 0.5);
 }
 
-/* Focus state for accessibility */
 .navbar-toggler:focus {
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Blue glow on focus */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+@media (min-width: 992px) {
+    .navbar-toggler {
+        display: none;
+    }
+
+    .navbar-collapse {
+        display: flex !important;
+    }
+}
+
+/* Existing Fixes (Keep These) */
+/* section {
+    scroll-margin-top: 70px;
+} */
+
+.hero-section {
+    margin-top: 40px;
+    z-index: 900;
+}
+
+/* Navigation Links (From Previous Response) */
+.nav-link {
+    color: #333;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #007BFF;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #007BFF;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: #0056b3;
+    font-weight: 500;
+}
+
+.nav-link.active::after {
+    width: 100%;
 }
 
 /* vinay: this is for hamberger issue : end */
@@ -344,7 +410,7 @@ footer .text-muted {
 
     /* Section Offset for Fixed Header */
     section {
-        scroll-margin-top: 70px;
+        scroll-margin-top: 45px;
     }
 
     /* Navbar and Toggler */
