@@ -14,6 +14,24 @@ gsap.from(".hero-content", {
   ease: "power3.out",
 });
 
+// Ensure ScrollToPlugin is included
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".nav-link").forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute("href").substring(1);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        gsap.to(window, {
+          duration: 1,
+          scrollTo: { y: targetElement, offsetY: 70 }, // Offset for fixed header
+          ease: "power2.out", // Smooth easing
+        });
+      }
+    });
+  });
+});
+
 // Navbar Scroll Effect
 window.addEventListener("scroll", () => {
   const nav = document.getElementById("mainNav");
