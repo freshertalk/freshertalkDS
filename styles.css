@@ -74,7 +74,6 @@ body {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(0, 123, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
     width: 1.5em;
     height: 1.5em;
-    vertical-align: middle;
     content: "";
     background-repeat: no-repeat;
     background-position: center;
@@ -359,9 +358,9 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Swiper */
+/* Swiper : for Hero Imafe and Header Nav bar padding*/
 .swiper {
-    padding: 2rem 0;
+    /* padding: 2rem 0; */
 }
 
 .swiper-slide {
