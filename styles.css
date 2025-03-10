@@ -52,11 +52,54 @@ body {
     background-color: #f8f9fa;
     z-index: 1000; /*High z-index to ensure it stays on top */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 80%;
+    width: 100%;
+    max-width: 100%;
     transition: all 0.3s ease;
     /* padding: 0 1rem; */
 }
+
+
+/* vinay : css starts */
+/* Default for desktop: relative positioning */
+
+/* Fix the navbar on mobile devices */
+@media (max-width: 576px) {
+    #mainNav {
+        position: fixed; /* Fix the navbar to the top */
+        top: 0;
+        left: 0;
+        width: 80%;
+        /* padding: 0.2rem 0.3rem; */
+    }
+
+    /* Add padding to the body to prevent content from being hidden under the fixed navbar */
+    body {
+        padding-top: 56px; /* Adjust this value based on the navbar height on mobile */
+    }
+
+    /* Ensure the hamburger menu and items are styled for mobile */
+    .navbar-collapse {
+        padding: 0;
+    }
+    .nav-item {
+        padding: 0.5rem 0;
+        text-align: center;
+    }
+}
+
+/* For tablet devices (optional adjustment) */
+@media (max-width: 768px) {
+    #mainNav {
+        /* padding: 0.3rem 0.5rem; */
+    }
+}
+
+/* Reset body margins */
+body {
+    margin: 0;
+    padding: 0;
+}
+/* vinay : CSS ends  */
 
  background-color: #f9faf9; /* Light background color */
     z-index: 1000; /* High z-index to ensure it stays on top */
