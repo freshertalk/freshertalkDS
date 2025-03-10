@@ -147,9 +147,9 @@ body {
         display: none;
     }
 
-    .navbar-collapse {
+    /* .navbar-collapse {
         display: flex !important;
-    }
+    } */
 }
 
 .hero-section {
