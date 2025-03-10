@@ -50,12 +50,21 @@ body {
 
 #mainNav {
     background-color: #f8f9fa;
-    z-index: 1000;
+    z-index: 1000; /*High z-index to ensure it stays on top */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 100%;
+    width: 80%;
+    max-width: 80%;
+    transition: all 0.3s ease;
     /* padding: 0 1rem; */
 }
+
+ background-color: #f9faf9; /* Light background color */
+    z-index: 1000; /* High z-index to ensure it stays on top */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 100%; /* Full width */
+    padding: 0.5rem 1rem; /* Responsive padding with rem units */
+    position: relative; /* Or 'fixed' if you want it sticky */
+    transition: all 0.3s ease; /* Smooth transition for responsiveness */
 
 .navbar-toggler {
     display: block;
